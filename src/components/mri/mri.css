@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.containerc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh; 
+    background: linear-gradient(135deg, #f7faff, #a5c9ff);
+    padding: 20px;
+    gap: 10px;
+    text-align: center;
+    flex-grow: 1; 
+    opacity: 0;
+    animation: fadeIn 1s forwards; 
+}
+
+
+.titlec {
+    font-size: 3rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 5px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.3s; 
+}
+
+.subtitlec {
+    font-size: 3rem;
+    color: #2563eb;
+    margin-top: -10px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.6s; 
+}
+
+.descriptionc {
+    font-size: 1.2rem;
+    color: black;
+    max-width: 700px;
+    line-height: 1.6;
+    font-weight: 500;
+    padding: 0 15px;
+    word-break: break-word;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.9s; 
+}
+
+
+.analyze-buttonc {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    margin-top: 10px;
+}
+
+.analyze-buttonc:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.05); 
+}
+
+.upload-section {
+    max-width: 1280px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.upload-box {
+    width: 90%;
+    max-width: 800px;
+    background: linear-gradient(135deg, #ffffff, #d6e6ff);
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px dashed #2563eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 40px auto;
+    height: 250px;
+}
+
+.upload-box:hover {
+    background-color: #f3f4f6;
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+
+.upload-icon {
+    font-size: 3rem;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+
+.upload-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+
+.upload-formats {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+
+.footer5 {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; 
+}
+
+.social-icons5 {
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.social-icon5 {
+    font-size: 2rem;
+    margin: 0 15px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-icon5:hover {
+    color: #007bff;
+}
+
+.footer-copyright5 p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .titlec, .subtitlec {
+        font-size: 2.5rem;
+    }
+
+    .descriptionc {
+        font-size: 1.1rem;
+    }
+
+    .upload-box {
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .titlec {
+        font-size: 2rem;
+    }
+
+    .subtitlec {
+        font-size: 1.8rem;
+    }
+
+    .descriptionc {
+        font-size: 1rem;
+    }
+
+    .analyze-buttonc {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .upload-box {
+        height: 200px;
+    }
+
+    .social-icon5 {
+        font-size: 1.5rem;
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .titlec {
+        font-size: 1.8rem;
+    }
+
+    .subtitlec {
+        font-size: 1.6rem;
+    }
+
+    .descriptionc {
+        font-size: 0.95rem;
+    }
+
+    .analyze-buttonc {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .upload-box {
+        padding: 20px;
+        height: 180px;
+    }
+
+    .social-icon5 {
+        font-size: 1.2rem;
+    }
+
+    .footer-copyright5 p {
+        font-size: 0.85rem;
+    }
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
