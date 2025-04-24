@@ -2,12 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh;
+    height: 119vh;
     background-image: url('/src/assets/login2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     transition: background 0.5s ease;
+
 }
 
 .signup-form {
@@ -41,7 +42,7 @@ h2 {
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 0.4rem;
     transition: transform 0.3s ease;
 }
 
@@ -55,15 +56,13 @@ input {
     background-color: transparent;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
+
 }
 
 input:focus {
     border-color: #007bff;
 }
 
-.form-group input {
-    padding-left: 0.2rem;
-}
 
 .signup-btn {
     width: 100%;

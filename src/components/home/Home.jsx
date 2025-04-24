@@ -1,11 +1,13 @@
 import React from 'react';
-import './Home.css'; 
+import './home.css'; 
 import { FaUserPlus, FaUpload, FaRobot, FaFileAlt, FaSignOutAlt, FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube, FaGoogle } from 'react-icons/fa';
 import { MdPerson } from 'react-icons/md'; 
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa'; 
+import Footer from '../footer/Footer';
 
 function Home() {
   return (
+    <>
     <div className="home">
       <div className="home-content">
        
@@ -223,24 +225,10 @@ function Home() {
     </div>
   </div>
 </section>
-
       
-       <div className="footer6">
-        
-            <div className="social-icons6">
-              <FaFacebook className="social-icon6" />
-              <FaInstagram className="social-icon6" />
-              <FaTwitter className="social-icon6" />
-              <FaGoogle className="social-icon6" />
-              <FaYoutube className="social-icon6" />
-              <FaLinkedin className="social-icon6" />
-            </div>
-          
-            <div className="footer-copyright6">
-              <p>&copy; 2025 MRI Detection System. All Rights Reserved.</p>
-            </div>
-          </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

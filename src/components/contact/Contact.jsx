@@ -2,9 +2,10 @@ import React from 'react';
 import { FaSearch, FaInfoCircle, FaRegQuestionCircle, FaFileAlt, FaUser, FaShareAlt } from 'react-icons/fa'; // Import icons
 import './contact.css'; 
 import { FaFacebook, FaInstagram, FaTwitter, FaGoogle, FaYoutube, FaLinkedin, FaUserAlt, FaLock, FaHeartbeat } from 'react-icons/fa'; // Correct social icons import (no duplicates)
-
+import Footer from '../footer/Footer';
 const ContactUs = () => {
   return (
+    <>
     <div>
       <div className="contact-container">
         <div className="content">
@@ -98,22 +99,10 @@ const ContactUs = () => {
       </div>
     </div>
           
-                 <div className="footer3">
-                   
-                   <div className="social-icons3">
-                     <FaFacebook className="social-icon3" />
-                     <FaInstagram className="social-icon3" />
-                     <FaTwitter className="social-icon3" />
-                     <FaGoogle className="social-icon3" />
-                     <FaYoutube className="social-icon3" />
-                     <FaLinkedin className="social-icon3" />
-                   </div>
-                   <div className="footer-copyright3">
-                     <p>&copy; 2025 MRI Detection System. All Rights Reserved.</p>
-                   </div>
-                 </div> 
+                
     </div>
-    
+    <Footer/>
+    </>
   );
 };
 

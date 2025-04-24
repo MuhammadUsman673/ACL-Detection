@@ -1,0 +1,64 @@
+/* Custom Footer Styling */
+.custom-footer {
+    background-color: black;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+    height: 150px;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #ff4081; /* Example hover color */
+  }
+  
+  .footer-note {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .footer-note p {
+    margin: 0;
+  }
+  
+
+  @media (max-width: 768px) {
+    .social-links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .social-icon {
+      font-size: 20px;
+    }
+  
+    .footer-note {
+      font-size: 12px;
+    }
+  }
+  
+  /* Extra Small Screens */
+  @media (max-width: 480px) {
+    .social-icon {
+      font-size: 18px;
+    }
+  
+    .footer-note {
+      font-size: 10px;
+    }
+  }

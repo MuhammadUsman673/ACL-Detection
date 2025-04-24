@@ -1,7 +1,7 @@
 import React from "react";
 import "./result.css";
 import { FaDownload, FaCheckCircle, FaTimesCircle, FaFacebook, FaInstagram, FaTwitter, FaGoogle, FaYoutube, FaLinkedin } from "react-icons/fa";
-
+import Footer from "../footer/Footer";
 export default function ResultPage() {
  
   const resultData = {
@@ -48,19 +48,8 @@ export default function ResultPage() {
       </div>
 
       
-      <div className="footer3">
-        <div className="social-icons3">
-          <FaFacebook className="social-icon3" />
-          <FaInstagram className="social-icon3" />
-          <FaTwitter className="social-icon3" />
-          <FaGoogle className="social-icon3" />
-          <FaYoutube className="social-icon3" />
-          <FaLinkedin className="social-icon3" />
-        </div>
-        <div className="footer-copyright3">
-          <p>&copy; 2025 MRI Detection System. All Rights Reserved.</p>
-        </div>
-      </div>
+   
+      <Footer/>
     </>
   );
 }
