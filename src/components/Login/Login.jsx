@@ -5,9 +5,6 @@ import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { FaGoogle } from 'react-icons/fa';
 import './login.css';
 
-// Import the image from the assets folder
-import loginImage from '../../assets/login.jpg';
-
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -42,7 +39,7 @@ function Login() {
 
   return (
     <>
-      <div className="login-container" style={{ backgroundImage: `url(${loginImage})` }}>
+      <div className="login-container">
         <div className="login-form">
           <h2>Welcome</h2>
 

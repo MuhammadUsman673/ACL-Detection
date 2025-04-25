@@ -4,7 +4,7 @@ import Footer from "../footer/Footer";
 import { FaFacebook, FaInstagram, FaTwitter, FaGoogle, FaYoutube, FaLinkedin, FaUserAlt, FaLock, FaHeartbeat } from 'react-icons/fa'; // Correct social icons import (no duplicates)
 
 // Importing images from src/assets folder
-import missionImage from '../assets/zain.jpg'; // Adjust the path according to the actual location of the image
+import missionImage from '../../assets/zain.jpg'; // Adjust the path according to the actual location of the image
 
 const About = () => {
   return (

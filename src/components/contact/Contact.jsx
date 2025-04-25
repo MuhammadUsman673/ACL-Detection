@@ -5,7 +5,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaGoogle, FaYoutube, FaLinkedin, Fa
 import Footer from '../footer/Footer';
 
 // Importing image from src/assets folder
-import contactImage from '../assets/contact.png'; // Adjust the path according to the actual location of the image
+import contactImage from '../../assets/contact.png'; // Adjust the path according to the actual location of the image
 
 const ContactUs = () => {
   return (
