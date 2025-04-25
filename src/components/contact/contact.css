@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -57,6 +58,7 @@
   }
 }
 
+
 @keyframes slideIn {
   0% {
     transform: translateY(-30px);
@@ -66,6 +68,7 @@
   }
 }
 
+
 @media screen and (max-width: 768px) {
   .content h1 {
     font-size: 2.5rem;
@@ -74,36 +77,9 @@
   .content input[type="text"] {
     max-width: 80%;
   }
-
-  .faq-boxes {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .form-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-
-  .form-wrapper {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .contact-image {
-    max-width: 90%;
-  }
-
-  .submit-btn {
-    width: 100%;
-  }
 }
 
 @media screen and (max-width: 480px) {
-  .contact-container {
-    padding: 10px;
-  }
-
   .content h1 {
     font-size: 2rem;
   }
@@ -111,27 +87,8 @@
   .content input[type="text"] {
     max-width: 90%;
   }
-
-  .faq-boxes {
-    grid-template-columns: 1fr;
-  }
-
-  .form-wrapper {
-    padding: 15px;
-  }
-
-  .contact-image {
-    max-width: 100%;
-  }
-
-  .submit-btn {
-    width: 100%;
-  }
-
-  .faq {
-    font-size: 2rem;
-  }
 }
+
 
 .faq-section {
   margin-top: 50px;
@@ -159,6 +116,7 @@
   opacity: 0;
   animation: fadeIn 1s 2s forwards;
 }
+
 
 .faq-box {
   /* background-color: white; */
@@ -194,6 +152,19 @@
   color: white;
 }
 
+@media (max-width: 768px) {
+  .faq-boxes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-boxes {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .form-heading {
   text-align: center;
   font-size: 22px;
@@ -228,6 +199,7 @@
   outline: none;
   box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
 }
+
 
 .submit-btn {
   padding: 10px 18px;
