@@ -127,7 +127,7 @@
   width: 100%;
   margin-top: 50px;
   background-color: none;
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 .heading-container {
@@ -148,7 +148,6 @@
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
-  padding: 10px;
   animation: fadeIn 1s ease-in-out;
   justify-content: center;
 }
@@ -211,14 +210,33 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .diseases-section {
+    padding: 20px 15px;
+  }
+
   .disease-boxes {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .disease-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .diseases-section {
+    padding: 20px 10px;
+  }
+
+  .disease-boxes {
     gap: 40px;
   }
 
   .disease-box {
     min-height: 150px;
+    width: 100%;
   }
 
   .disease-box h2 {
@@ -232,7 +250,7 @@
   .disease-box:hover .disease-image {
     opacity: 1;
     height: 150px;
-    width: 390px;
+    width: 100%;
   }
 }
 
