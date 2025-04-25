@@ -6,12 +6,12 @@ import Footer from '../footer/Footer';
 
 // Import images from src/assets
 import image212 from '../../assets/212.png';
-import img1 from '../../assets/1p.jpg';
-import img2 from '../../assets/2p.jpg';
-import uzzi from '../../assets/uzzi.png';
-import img4 from '../../assets/4p.jpeg';
-import img5 from '../../assets/5p.jpeg';
-import img6 from '../../assets/6p.jpg';
+import img1 from '../../assets/acl-sprain800.jpg';
+import img2 from '../../assets/alu.webp';
+import uzzi from '../../assets/alu3.jpg';
+import img4 from '../../assets/42.webp';
+import img5 from '../../assets/img.jpeg';
+import img6 from '../../assets/img2.webp';
 import user1 from '../../assets/user.jpeg';
 import user2 from '../../assets/user2.jpeg';
 import user3 from '../../assets/user3.jpeg';
@@ -23,9 +23,9 @@ function Home() {
         <div className="home-content">
           <div className="content-container">
             <div className="text-container">
-              <h1>Welcome to the Ai Based Knee Mri Osteochondral Disease Detection System</h1>
+              <h1>Welcome to the AI-Based Knee MRI ACL Injury Detection System</h1>
               <p>
-                Our AI-powered MRI detection system helps diagnose osteochondral issues in knee MRIs with high accuracy. By analyzing MRI scans, our system can detect potential problems early, allowing for timely treatment.
+              Our AI-powered MRI detection system helps diagnose ACL injuries in knee MRIs with high accuracy. By analyzing MRI scans, our system can identify potential ACL issues early, allowing for prompt treatment. The technology is user-friendly and assists doctors in making informed decisions. You can upload your MRI scans to receive a detailed analysis within minutes. Our goal is to provide accurate diagnoses to guide treatment for better recovery outcomes.
                 <br />
                 The technology is easy to use and can help doctors make informed decisions. You can upload your MRI scans to receive a detailed analysis within minutes. Our goal is to provide accurate diagnoses that can guide treatment for better outcomes.
               </p>
@@ -44,39 +44,39 @@ function Home() {
 
           <div className="disease-boxes">
             <div className="disease-box">
-              <h2>Osteochondritis Dissecans</h2>
-              <p>Joint condition where cartilage and bone fragment detach.</p>
-              <img className="disease-image" src={img1} alt="Osteochondritis Dissecans" />
+              <h2>ACL Sprain</h2>
+              <p>Partial tear or stretch of the ACL, ranging in severity.</p>
+              <img className="disease-image" src={img1} alt="" />
             </div>
 
             <div className="disease-box">
-              <h2>Osteoarthritis</h2>
-              <p>Degenerative joint disease leading to cartilage breakdown.</p>
-              <img className="disease-image" src={img2} alt="Osteoarthritis" />
+              <h2>ACL Tear</h2>
+              <p>Complete or partial rupture of the ACL ligament.</p>
+              <img className="disease-image" src={img2} alt="" />
             </div>
 
             <div className="disease-box">
-              <h2>Chondral Defects</h2>
-              <p>Damage to cartilage without affecting the underlying bone.</p>
-              <img className="disease-image" src={uzzi} alt="Chondral Defects" />
+              <h2>ACL Avulsion Fracture</h2>
+              <p>ACL ligament pulls away from the bone, causing bone fracture.</p>
+              <img className="disease-image" src={uzzi} alt="" />
             </div>
 
             <div className="disease-box">
-              <h2>Avascular Necrosis</h2>
-              <p>Loss of blood supply to bone, causing tissue death.</p>
-              <img className="disease-image" src={img4} alt="Avascular Necrosis" />
+              <h2>ACL Stretching</h2>
+              <p>Mild stretching of the ACL without tearing.</p>
+              <img className="disease-image" src={img4} alt="" />
             </div>
 
             <div className="disease-box">
-              <h2>Knee Osteochondral Lesions</h2>
-              <p>Damage to both cartilage and bone in the knee joint.</p>
-              <img className="disease-image" src={img5} alt="Knee Osteochondral Lesions" />
+              <h2>ACL Contusion</h2>
+              <p>Bruise or mild injury to the ACL ligament.</p>
+              <img className="disease-image" src={img5} alt="" />
             </div>
 
             <div className="disease-box">
-              <h2>Post-traumatic Osteoarthritis</h2>
-              <p>OA following joint trauma, affecting cartilage and bone.</p>
-              <img className="disease-image" src={img6} alt="Post-traumatic Osteoarthritis" />
+              <h2>Recurrent ACL Injury</h2>
+              <p>Re-injury or re-tearing of ACL after previous recovery.</p>
+              <img className="disease-image" src={img6} alt="" />
             </div>
           </div>
         </div>
@@ -129,7 +129,7 @@ function Home() {
               <div className="testimonial-header">
                 <img src={user1} alt="Client 1" className="testimonial-img" />
                 <div className="testimonial-info">
-                  <h3>John Doe</h3>
+                  <h3>Muhammad Farooq</h3>
                   <p className="position">CEO at Company</p>
                 </div>
               </div>
@@ -149,7 +149,7 @@ function Home() {
               <div className="testimonial-header">
                 <img src={user2} alt="Client 2" className="testimonial-img" />
                 <div className="testimonial-info">
-                  <h3>Jane Smith</h3>
+                  <h3>Ali Abbas</h3>
                   <p className="position">Marketing Director</p>
                 </div>
               </div>
@@ -169,7 +169,7 @@ function Home() {
               <div className="testimonial-header">
                 <img src={user3} alt="Client 3" className="testimonial-img" />
                 <div className="testimonial-info">
-                  <h3>Mark Wilson</h3>
+                  <h3>Abdur Rehman</h3>
                   <p className="position">Product Manager</p>
                 </div>
               </div>

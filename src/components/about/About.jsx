@@ -17,7 +17,7 @@ const About = () => {
           <p>
             Nearly every care journey starts with a medical image — and Our Website helps empower patients with the tools they need to truly understand their imaging records, take the best next step in their care and improve their health outcomes.
           </p>
-          <button className="access-records-btn">Access My Records</button>
+          {/* <button className="access-records-btn">Access My Records</button> */}
         </div>
         <div className="about-right">
           {/* Updated Image Path using imported image */}
