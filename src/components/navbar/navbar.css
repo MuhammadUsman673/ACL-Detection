@@ -85,48 +85,6 @@ html, body {
   transform: scale(1.1);
 }
 
-@media screen and (max-width: 768px) {
-  .custom-menu {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-
-  .custom-hamburger {
-    display: block;
-  }
-
-  .custom-menu.custom-menu-active {
-    display: block;
-    opacity: 1;
-    background-color: #444;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 200px;
-    padding: 10px;
-    transform: translateX(0);
-    animation: slideIn 0.3s ease-out;
-  }
-
-  .custom-menu ul {
-    flex-direction: column;
-  }
-
-  .custom-menu li {
-    margin: 10px 0;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
 .logout-button {
   background-color: #007bff;
   color: white;
@@ -138,7 +96,6 @@ html, body {
   transition: background-color 0.3s ease;
   align-self: center;  /* Align the logout button with other items */
 }
-
 
 .logout-button:hover {
   background-color: #0056b3;
@@ -172,4 +129,106 @@ html, body {
   cursor: pointer;
   transition: background-color 0.3s ease;
   align-self: center;  /* Ensures it's vertically aligned with other menu items */
+}
+
+/* Media Query for Screens Smaller Than 768px */
+@media screen and (max-width: 768px) {
+  /* Adjusting Navbar and Menu for smaller screens */
+  .custom-navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+  }
+
+  .custom-logo img {
+    height: 30px; /* Smaller logo for mobile */
+  }
+
+  .custom-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .custom-hamburger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px; /* Positioning hamburger button at the top-right */
+    z-index: 101;
+  }
+
+  .custom-menu.custom-menu-active {
+    display: block;
+    opacity: 1;
+    background-color: #444;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    transform: translateY(0);
+    animation: slideIn 0.3s ease-out;
+  }
+
+  .custom-menu ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .custom-menu li {
+    margin: 10px 0;
+  }
+
+  .custom-menu a {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Adjust Logout Button */
+  .logout-button {
+    width: 80%; /* Make button take full width on mobile */
+    margin: 10px 0;
+  }
+}
+
+/* Slide-in Animation for Mobile Menu */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Media Query for Small Screens (Portrait Mode) */
+@media screen and (max-width: 480px) {
+  .custom-navbar {
+    padding: 10px;
+  }
+
+  .custom-logo img {
+    height: 25px; /* Further smaller logo */
+  }
+
+  .custom-menu li {
+    margin: 8px 0; /* Smaller spacing between items */
+  }
+
+  .custom-menu a {
+    padding: 8px; /* Smaller padding for menu items */
+  }
+
+  .logout-button {
+    width: 90%; /* Button width adjustment for small screens */
+  }
 }
