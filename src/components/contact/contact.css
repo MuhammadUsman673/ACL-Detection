@@ -88,7 +88,7 @@
 @media screen and (max-width: 480px) {
   .contact-container {
     height: auto; /* Allow the container height to adjust */
-    padding: 20px;
+    padding: 0 15px; /* Add left and right padding for mobile */
   }
 
   .content h1 {
@@ -96,7 +96,13 @@
   }
 
   .content input[type="text"] {
-    max-width: 90%;
+    max-width: 90%; /* Adjust input width for mobile */
+  }
+  
+  /* FAQ Section */
+  .faq-section {
+    margin-left: 15px;  /* Left margin for mobile */
+    margin-right: 15px; /* Right margin for mobile */
   }
 }
 
@@ -325,25 +331,3 @@
   font-size: 3rem;
   margin-top: 15px;
 }
-/* Mobile screen and smaller */
-@media screen and (max-width: 480px) {
-  .contact-container {
-    height: auto; /* Allow the container height to adjust */
-    padding: 0 15px; /* Add left and right padding for mobile */
-  }
-
-  .content h1 {
-    font-size: 2rem;
-  }
-
-  .content input[type="text"] {
-    max-width: 90%; /* Adjust input width for mobile */
-  }
-  
-  /* If you want to add margins to faq section as well */
-  .faq-section {
-    margin-left: 15px;  /* Left margin for mobile */
-    margin-right: 15px; /* Right margin for mobile */
-  }
-}
-  
