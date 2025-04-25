@@ -92,7 +92,8 @@
   }
 
   .content h1 {
-    font-size: 2rem;
+    max-width: 90%;
+    font-size: 1rem;
     margin-left: 30px; /* Added margin-left to move text inward */
     margin-right: 30px; /* Added margin-right to move text inward */
   }
