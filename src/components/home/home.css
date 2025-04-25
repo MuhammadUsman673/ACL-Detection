@@ -211,7 +211,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .disease-boxes {
     grid-template-columns: 1fr;
     gap: 40px;
