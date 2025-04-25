@@ -3,6 +3,9 @@ import './about.css';
 import Footer from "../footer/Footer";
 import { FaFacebook, FaInstagram, FaTwitter, FaGoogle, FaYoutube, FaLinkedin, FaUserAlt, FaLock, FaHeartbeat } from 'react-icons/fa'; // Correct social icons import (no duplicates)
 
+// Importing images from src/assets folder
+import missionImage from '../assets/zain.jpg'; // Adjust the path according to the actual location of the image
+
 const About = () => {
   return (
     <>
@@ -17,11 +20,11 @@ const About = () => {
           <button className="access-records-btn">Access My Records</button>
         </div>
         <div className="about-right">
-          <img src="src/assets/zain.jpg" alt="Medical professionals assisting patients with healthcare" className="mission-image" />
+          {/* Updated Image Path using imported image */}
+          <img src={missionImage} alt="Medical professionals assisting patients with healthcare" className="mission-image" />
         </div>
       </div>
 
-    
       <div className="principles-container">
         <h2 className="principles-heading">Our Guiding Principles</h2>
         <div className="principles-boxes">
@@ -43,8 +46,6 @@ const About = () => {
         </div>
       </div>
 
-      
-     
     </div>
     <Footer/>
     </>

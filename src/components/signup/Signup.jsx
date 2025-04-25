@@ -5,6 +5,9 @@ import Footer from '../footer/Footer';
 import { FaGoogle } from 'react-icons/fa';
 import './signup.css';
 
+// Import the background image from the assets folder
+import signupImage from '../../assets/signup.jpg';
+
 function Signup() {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
@@ -47,7 +50,7 @@ function Signup() {
 
   return (
     <>
-      <div className="signup-container">
+      <div className="signup-container" style={{ backgroundImage: `url(${signupImage})` }}>
         <div className="signup-form">
           <h2>Create Account</h2>
 
