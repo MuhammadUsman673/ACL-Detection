@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../../firebase';
 import './navbar.css';
+import logo from '../../assets/zain.png'; // ✅ Import the logo
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,17 +11,12 @@ function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  const getActiveClass = (path) => {
-    return location.pathname === path ? 'custom-active' : '';
-  };
+  const getActiveClass = (path) => location.pathname === path ? 'custom-active' : '';
 
   const handleLogout = async () => {
-    const confirmLogout = window.confirm('Are you sure you want to log out?');
-    if (!confirmLogout) return;
+    if (!window.confirm('Are you sure you want to log out?')) return;
 
     try {
       await signOut(auth);
@@ -34,14 +30,13 @@ function Navbar() {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
-
     return () => unsubscribe();
   }, []);
 
   return (
     <nav className="custom-navbar">
       <div className="custom-logo">
-        <img src="/src/assets/zain.png" alt="Logo" />
+        <img src={logo} alt="Logo" /> {/* ✅ Use imported image */}
       </div>
       <div className={`custom-menu ${menuOpen ? 'custom-menu-active' : ''}`}>
         <ul>
@@ -54,9 +49,7 @@ function Navbar() {
             <li><Link to="/login" className={getActiveClass('/login')}>Login</Link></li>
           ) : (
             <li>
-              <button className="logout-button" onClick={handleLogout}>
-                Logout
-              </button>
+              <button className="logout-button" onClick={handleLogout}>Logout</button>
             </li>
           )}
         </ul>
