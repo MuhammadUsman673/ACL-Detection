@@ -88,17 +88,21 @@
 @media screen and (max-width: 480px) {
   .contact-container {
     height: auto; /* Allow the container height to adjust */
-    padding: 0 15px; /* Add left and right padding for mobile */
+    padding: 0 15px; /* Added left and right padding */
   }
 
   .content h1 {
     font-size: 2rem;
+    margin-left: 10px; /* Added margin-left to move text inward */
+    margin-right: 10px; /* Added margin-right to move text inward */
   }
 
   .content input[type="text"] {
     max-width: 90%; /* Adjust input width for mobile */
+    margin-left: 10px;  /* Added left margin */
+    margin-right: 10px; /* Added right margin */
   }
-  
+
   /* FAQ Section */
   .faq-section {
     margin-left: 15px;  /* Left margin for mobile */
