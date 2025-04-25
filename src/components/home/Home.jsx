@@ -30,7 +30,7 @@ function Home() {
 
 <div className="diseases-section">
   <div className="heading-container">
-    <h1>Types of Osteochondral Diseases</h1>
+    <h1>Types of ACL Diseases</h1>
   </div>
 
   <div className="disease-boxes">
