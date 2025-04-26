@@ -1,7 +1,7 @@
 import React from 'react';
-import './home.css'; 
+import './home.css';
 import { FaUserPlus, FaUpload, FaRobot, FaFileAlt, FaSignOutAlt } from 'react-icons/fa';
-import { MdPerson } from 'react-icons/md'; 
+import { MdPerson } from 'react-icons/md';
 import Footer from '../footer/Footer';
 
 // Import images from src/assets
@@ -25,14 +25,12 @@ function Home() {
             <div className="text-container">
               <h1>Welcome to the AI-Based Knee MRI ACL Injury Detection System</h1>
               <p>
-              Our AI-powered MRI detection system helps diagnose ACL injuries in knee MRIs with high accuracy. By analyzing MRI scans, our system can identify potential ACL issues early, allowing for prompt treatment. The technology is user-friendly and assists doctors in making informed decisions. You can upload your MRI scans to receive a detailed analysis within minutes. Our goal is to provide accurate diagnoses to guide treatment for better recovery outcomes.
-                <br />
-                The technology is easy to use and can help doctors make informed decisions. You can upload your MRI scans to receive a detailed analysis within minutes. Our goal is to provide accurate diagnoses that can guide treatment for better outcomes.
+                Our AI-powered MRI detection system diagnoses ACL injuries in knee MRIs with high accuracy. Upload your MRI scans to receive a detailed analysis within minutes. The user-friendly technology assists doctors in making informed decisions, enabling early detection and better recovery outcomes.
               </p>
             </div>
 
             <div className="image-container">
-              <img src={image212} alt="MRI detection" />
+              <img src={image212} alt="AI MRI Detection System" />
             </div>
           </div>
         </div>
@@ -46,37 +44,37 @@ function Home() {
             <div className="disease-box">
               <h2>ACL Sprain</h2>
               <p>Partial tear or stretch of the ACL, ranging in severity.</p>
-              <img className="disease-image" src={img1} alt="" />
+              <img className="disease-image" src={img1} alt="ACL Sprain" />
             </div>
 
             <div className="disease-box">
               <h2>ACL Tear</h2>
               <p>Complete or partial rupture of the ACL ligament.</p>
-              <img className="disease-image" src={img2} alt="" />
+              <img className="disease-image" src={img2} alt="ACL Tear" />
             </div>
 
             <div className="disease-box">
               <h2>ACL Avulsion Fracture</h2>
               <p>ACL ligament pulls away from the bone, causing bone fracture.</p>
-              <img className="disease-image" src={uzzi} alt="" />
+              <img className="disease-image" src={uzzi} alt="ACL Avulsion Fracture" />
             </div>
 
             <div className="disease-box">
               <h2>ACL Stretching</h2>
               <p>Mild stretching of the ACL without tearing.</p>
-              <img className="disease-image" src={img4} alt="" />
+              <img className="disease-image" src={img4} alt="ACL Stretching" />
             </div>
 
             <div className="disease-box">
               <h2>ACL Contusion</h2>
               <p>Bruise or mild injury to the ACL ligament.</p>
-              <img className="disease-image" src={img5} alt="" />
+              <img className="disease-image" src={img5} alt="ACL Contusion" />
             </div>
 
             <div className="disease-box">
               <h2>Recurrent ACL Injury</h2>
               <p>Re-injury or re-tearing of ACL after previous recovery.</p>
-              <img className="disease-image" src={img6} alt="" />
+              <img className="disease-image" src={img6} alt="Recurrent ACL Injury" />
             </div>
           </div>
         </div>
@@ -127,7 +125,7 @@ function Home() {
           <div className="testimonial-boxes">
             <div className="testimonial-box">
               <div className="testimonial-header">
-                <img src={user1} alt="Client 1" className="testimonial-img" />
+                <img src={user1} alt="Muhammad Farooq" className="testimonial-img" />
                 <div className="testimonial-info">
                   <h3>Muhammad Farooq</h3>
                   <p className="position">CEO at Company</p>
@@ -147,7 +145,7 @@ function Home() {
 
             <div className="testimonial-box">
               <div className="testimonial-header">
-                <img src={user2} alt="Client 2" className="testimonial-img" />
+                <img src={user2} alt="Ali Abbas" className="testimonial-img" />
                 <div className="testimonial-info">
                   <h3>Ali Abbas</h3>
                   <p className="position">Marketing Director</p>
@@ -167,7 +165,7 @@ function Home() {
 
             <div className="testimonial-box">
               <div className="testimonial-header">
-                <img src={user3} alt="Client 3" className="testimonial-img" />
+                <img src={user3} alt="Abdur Rehman" className="testimonial-img" />
                 <div className="testimonial-info">
                   <h3>Abdur Rehman</h3>
                   <p className="position">Product Manager</p>

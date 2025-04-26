@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../../firebase';
 import './navbar.css';
-import logo from '../../assets/zain.png'; // ✅ Import the logo
+import logo from '../../assets/zain.png';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +13,7 @@ function Navbar() {
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  const getActiveClass = (path) => location.pathname === path ? 'custom-active' : '';
+  const getActiveClass = (path) => (location.pathname === path ? 'custom-active' : '');
 
   const handleLogout = async () => {
     if (!window.confirm('Are you sure you want to log out?')) return;
@@ -36,7 +36,7 @@ function Navbar() {
   return (
     <nav className="custom-navbar">
       <div className="custom-logo">
-        <img src={logo} alt="Logo" /> {/* ✅ Use imported image */}
+        <img src={logo} alt="Zain MRI App Logo" />
       </div>
       <div className={`custom-menu ${menuOpen ? 'custom-menu-active' : ''}`}>
         <ul>
@@ -55,7 +55,7 @@ function Navbar() {
         </ul>
       </div>
       <div className="custom-hamburger" onClick={toggleMenu}>
-        <button>☰</button>
+        <button aria-label="Toggle navigation menu">☰</button>
       </div>
     </nav>
   );
