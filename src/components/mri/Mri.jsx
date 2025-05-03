@@ -57,7 +57,7 @@ export default function MRIUpload() {
     <>
       <div className="main-container">
         <div className="containerc">
-          <h1 className="titlec">AI MRI Uploader</h1>
+          <h1 className="titlec">Result One Click Away</h1>
           <h2 className="subtitlec">Advanced AI Analysis for MRI Scans</h2>
           <p className="descriptionc">
             Upload your MRI scan images for instant, AI-powered analysis and interpretation.
@@ -65,7 +65,7 @@ export default function MRIUpload() {
           </p>
 
           <div className="upload-section">
-            <h2 className="upload-heading">X-ray, CT scans, MRI, and Ultrasound</h2>
+            <h2 className="upload-heading">Upload Your Mri Scan Here</h2>
             <div
               className="upload-box"
               role="button"
