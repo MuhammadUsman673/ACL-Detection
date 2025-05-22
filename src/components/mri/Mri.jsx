@@ -455,22 +455,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  import React, { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { FaCloudUploadAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
@@ -487,10 +472,11 @@ export default function MRIUpload() {
   const [isValidScan, setIsValidScan] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
 
+  // Enhanced login check that shows a message and redirects
   const checkLogin = () => {
     if (!auth.currentUser) {
-      alert("You must log in to upload files!");
-      navigate("/login");
+      setUploadMessage("❌ You must log in to upload files!");
+      setTimeout(() => navigate("/login"), 1500);
       return false;
     }
     return true;
@@ -518,6 +504,11 @@ export default function MRIUpload() {
   }
 
   const handleFileChange = (event) => {
+    // First check if user is logged in
+    if (!checkLogin()) {
+      return;
+    }
+
     const file = event.target.files[0];
     if (!file) {
       setUploadMessage("❌ No file selected.");
@@ -603,8 +594,12 @@ export default function MRIUpload() {
               className="upload-box"
               role="button"
               tabIndex={0}
-              onClick={() => fileInputRef.current?.click()}
-              onKeyPress={(e) => e.key === "Enter" && fileInputRef.current?.click()}
+              onClick={() => {
+                if (checkLogin()) {
+                  fileInputRef.current?.click();
+                }
+              }}
+              onKeyPress={(e) => e.key === "Enter" && checkLogin() && fileInputRef.current?.click()}
             >
               <FaCloudUploadAlt className="upload-icon" />
               <p className="upload-text">Click to upload or drag and drop</p>
@@ -626,8 +621,12 @@ export default function MRIUpload() {
             </div>
           )}
 
-          <button className="upload-button" onClick={handleUploadClick}>
-            Submit
+          <button 
+            className="upload-button" 
+            onClick={handleUploadClick}
+            disabled={!auth.currentUser} // Disable button if not logged in
+          >
+            {auth.currentUser ? "Submit" : "Please Login First"}
           </button>
         </div>
       </div>
@@ -635,6 +634,15 @@ export default function MRIUpload() {
     </>
   );
 }
+
+
+
+
+
+
+
+
+
 
 
 
