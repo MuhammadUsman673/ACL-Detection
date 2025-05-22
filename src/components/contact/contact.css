@@ -1,4 +1,3 @@
-/* General styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,11 +7,9 @@
 
 .contact-page {
   width: 100%;
- /* Space for sticky navbar */
   background-color: white;
 }
 
-/* Hero section */
 .contact-container {
   background: linear-gradient(to right, #191919, #444444);
   width: 100%;
@@ -58,7 +55,6 @@
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
 }
 
-/* FAQ section */
 .faq-section {
   margin-top: 40px;
   padding: 20px;
@@ -94,6 +90,7 @@
   text-align: center;
   transform: scale(0.9);
   transition: transform 0.3s ease-in-out;
+  min-height: 200px;
 }
 
 .faq-box:hover {
@@ -104,20 +101,33 @@
   font-size: 1.4rem;
   color: white;
   margin-bottom: 10px;
+  transition: opacity 0.3s ease;
 }
 
 .faq-icon {
   font-size: 2.5rem;
   color: white;
   margin: 10px 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
 }
 
 .faq-box p {
   font-size: 0.95rem;
   color: white;
+  transition: opacity 0.3s ease;
 }
 
-/* Form section */
+.faq-box:hover h3,
+.faq-box:hover p {
+  opacity: 0;
+}
+
+.faq-box:hover .faq-icon {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
 .form-section {
   padding: 40px 20px;
   text-align: center;
@@ -227,7 +237,6 @@
   animation: fadeIn 1s 2s forwards;
 }
 
-/* Footer (from Home.js for consistency) */
 .footer6 {
   width: 100%;
   background-color: #000;
@@ -262,7 +271,6 @@
   margin-top: 10px;
 }
 
-/* Animations */
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
@@ -273,14 +281,72 @@
   100% { transform: translateY(0); }
 }
 
-/* Responsive adjustments */
-
-/* Large screens */
-@media (min-width: 1400px) {
-  .contact-page {
-    padding-top: 100px;
+@media (min-width: 1600px) {
+  .contact-container {
+    min-height: 450px;
   }
 
+  .content h1 {
+    font-size: 4.5rem;
+  }
+
+  .content input[type="text"] {
+    max-width: 700px;
+    font-size: 1.2rem;
+  }
+
+  .faq-section {
+    max-width: 1400px;
+  }
+
+  .faq-heading {
+    font-size: 3.5rem;
+  }
+
+  .faq-box h3 {
+    font-size: 1.8rem;
+  }
+
+  .faq-box p {
+    font-size: 1.1rem;
+  }
+
+  .faq-icon {
+    font-size: 3.5rem;
+  }
+
+  .faq {
+    font-size: 3.5rem;
+  }
+
+  .form-container {
+    max-width: 1400px;
+    gap: 40px;
+  }
+
+  .form-wrapper {
+    max-width: 600px;
+    padding: 50px;
+  }
+
+  .contact-image {
+    max-width: 600px;
+  }
+
+  .footer6 {
+    padding: 50px 30px;
+  }
+
+  .social-icon6 {
+    font-size: 2.2rem;
+  }
+
+  .footer-copyright6 p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
   .contact-container {
     min-height: 400px;
   }
@@ -336,12 +402,7 @@
   }
 }
 
-/* Tablets and small laptops */
 @media (max-width: 1024px) {
-  .contact-page {
-    padding-top: 80px;
-  }
-
   .contact-container {
     min-height: 250px;
   }
@@ -382,12 +443,7 @@
   }
 }
 
-/* Mobile devices */
 @media (max-width: 768px) {
-  .contact-page {
-    padding-top: 70px;
-  }
-
   .contact-container {
     min-height: 200px;
     padding: 15px;
@@ -457,12 +513,7 @@
   }
 }
 
-/* Small devices */
 @media (max-width: 480px) {
-  .contact-page {
-    padding-top: 60px;
-  }
-
   .contact-container {
     min-height: 180px;
     padding: 10px;
@@ -484,6 +535,10 @@
 
   .faq-heading {
     font-size: 1.6rem;
+  }
+
+  .faq-box {
+    min-height: 180px;
   }
 
   .faq-box h3 {
@@ -544,12 +599,7 @@
   }
 }
 
-/* Extra small devices */
 @media (max-width: 360px) {
-  .contact-page {
-    padding-top: 60px;
-  }
-
   .contact-container {
     min-height: 160px;
     padding: 8px;
@@ -565,6 +615,10 @@
 
   .faq-heading {
     font-size: 1.4rem;
+  }
+
+  .faq-box {
+    min-height: 160px;
   }
 
   .faq-box h3 {
@@ -615,5 +669,9 @@
 
   .social-icon6 {
     font-size: 1.2rem;
+  }
+
+  .footer-copyright6 p {
+    font-size: 0.75rem;
   }
 }

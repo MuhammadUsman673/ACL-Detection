@@ -7,66 +7,62 @@
     padding: 0;
 }
 
-
 html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-
 .containerc {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 60vh; 
+    min-height: 60vh;
     background: linear-gradient(135deg, #f7faff, #a5c9ff);
     padding: 20px;
     gap: 10px;
     text-align: center;
-    flex-grow: 1; 
+    flex-grow: 1;
     opacity: 0;
-    animation: fadeIn 1s forwards; 
+    animation: fadeIn 1s forwards;
 }
 
-
 .titlec {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 5vw, 3rem); /* Responsive font size */
     font-weight: 700;
     color: black;
     margin-bottom: 5px;
     opacity: 0;
-    animation: fadeIn 1s forwards 0.3s; 
+    animation: fadeIn 1s forwards 0.3s;
 }
 
 .subtitlec {
-    font-size: 3rem;
+    font-size: clamp(1.6rem, 5vw, 3rem); /* Responsive font size */
     color: #2563eb;
     margin-top: -10px;
     opacity: 0;
-    animation: fadeIn 1s forwards 0.6s; 
+    animation: fadeIn 1s forwards 0.6s;
 }
 
 .descriptionc {
-    font-size: 1.2rem;
+    font-size: clamp(0.95rem, 2vw, 1.2rem); /* Responsive font size */
     color: black;
-    max-width: 700px;
+    max-width: min(700px, 90vw); /* Responsive max-width */
     line-height: 1.6;
     font-weight: 500;
     padding: 0 15px;
     word-break: break-word;
     opacity: 0;
-    animation: fadeIn 1s forwards 0.9s; 
+    animation: fadeIn 1s forwards 0.9s;
 }
-
 
 .analyze-buttonc {
     background-color: #2563eb;
     color: white;
-    padding: 12px 24px;
+    padding: clamp(10px, 2vw, 12px) clamp(16px, 3vw, 24px); /* Responsive padding */
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font size */
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -76,22 +72,20 @@ html, body {
 
 .analyze-buttonc:hover {
     background-color: #1d4ed8;
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .upload-section {
-    max-width: 1280px;
+    max-width: min(1280px, 95vw); /* Responsive max-width */
     width: 100%;
     text-align: center;
     padding: 20px;
 }
 
-
 .upload-box {
-    width: 90%;
-    max-width: 800px;
+    width: min(90%, 800px); /* Responsive width */
     background: linear-gradient(135deg, #ffffff, #d6e6ff);
-    padding: 30px;
+    padding: clamp(20px, 3vw, 30px); /* Responsive padding */
     border-radius: 10px;
     border: 2px dashed #2563eb;
     display: flex;
@@ -101,54 +95,50 @@ html, body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin: 40px auto;
-    height: 250px;
+    margin: clamp(20px, 4vw, 40px) auto; /* Responsive margin */
+    height: clamp(180px, 30vw, 250px); /* Responsive height */
 }
 
 .upload-box:hover {
     background-color: #f3f4f6;
-    transform: translateY(-5px); /* Lift effect on hover */
+    transform: translateY(-5px);
 }
 
-
 .upload-icon {
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 3rem); /* Responsive icon size */
     color: #2563eb;
     margin-bottom: 10px;
 }
 
-
 .upload-text {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
     font-weight: 500;
     color: #374151;
 }
 
-
 .upload-formats {
-    font-size: 1rem;
+    font-size: clamp(0.85rem, 1.8vw, 1rem); /* Responsive font size */
     color: #6b7280;
     margin-top: 5px;
 }
-
 
 .footer5 {
     width: 100%;
     background-color: black;
     color: white;
-    padding: 20px;
+    padding: clamp(15px, 2vw, 20px); /* Responsive padding */
     text-align: center;
-    margin-top: auto; 
+    margin-top: auto;
 }
 
 .social-icons5 {
-    margin-bottom: 15px;
-    margin-top: 10px;
+    margin-bottom: clamp(10px, 1.5vw, 15px); /* Responsive margin */
+    margin-top: clamp(5px, 1vw, 10px); /* Responsive margin */
 }
 
 .social-icon5 {
-    font-size: 2rem;
-    margin: 0 15px;
+    font-size: clamp(1.2rem, 3vw, 2rem); /* Responsive icon size */
+    margin: 0 clamp(8px, 1.5vw, 15px); /* Responsive margin */
     color: white;
     transition: color 0.3s ease;
 }
@@ -158,145 +148,88 @@ html, body {
 }
 
 .footer-copyright5 p {
-    font-size: 1rem;
+    font-size: clamp(0.85rem, 2vw, 1rem); /* Responsive font size */
     color: #bbb;
-    margin-top: 10px;
+    margin-top: clamp(5px, 1vw, 10px); /* Responsive margin */
 }
 
-
-@media screen and (max-width: 1024px) {
-    .titlec, .subtitlec {
-        font-size: 2.5rem;
-    }
-
-    .descriptionc {
-        font-size: 1.1rem;
-    }
-
-    .upload-box {
-        height: 220px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .titlec {
-        font-size: 2rem;
-    }
-
-    .subtitlec {
-        font-size: 1.8rem;
-    }
-
-    .descriptionc {
-        font-size: 1rem;
-    }
-
-    .analyze-buttonc {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-
-    .upload-box {
-        height: 200px;
-    }
-
-    .social-icon5 {
-        font-size: 1.5rem;
-        margin: 0 10px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .titlec {
-        font-size: 1.8rem;
-    }
-
-    .subtitlec {
-        font-size: 1.6rem;
-    }
-
-    .descriptionc {
-        font-size: 0.95rem;
-    }
-
-    .analyze-buttonc {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-
-    .upload-box {
-        padding: 20px;
-        height: 180px;
-    }
-
-    .social-icon5 {
-        font-size: 1.2rem;
-    }
-
-    .footer-copyright5 p {
-        font-size: 0.85rem;
-    }
-}
-
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
 .scan-label {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 8px;
-  display: block;
+    font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font size */
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
 }
 
 .scan-select {
-  padding: 8px 12px;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  width: 100%;
-  max-width: 300px;
+    padding: clamp(6px, 1vw, 8px) clamp(10px, 1.5vw, 12px); /* Responsive padding */
+    font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font size */
+    margin-bottom: clamp(15px, 2vw, 20px); /* Responsive margin */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    max-width: min(300px, 90vw); /* Responsive max-width */
 }
 
-
-
-
-
 .file-info {
-    margin-top: 10px;
-    font-size: 1rem;
+    margin-top: clamp(8px, 1vw, 10px); /* Responsive margin */
+    font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font size */
     display: flex;
     align-items: center;
-    gap: 8px;
-  }
-  
-  .check-icon {
-    font-size: 1.2rem;
-  }
-  
-  .upload-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
+    gap: clamp(5px, 1vw, 8px); /* Responsive gap */
+}
+
+.check-icon {
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive icon size */
+}
+
+.upload-button {
+    margin-top: clamp(15px, 2vw, 20px); /* Responsive margin */
+    padding: clamp(8px, 1.5vw, 10px) clamp(15px, 2vw, 20px); /* Responsive padding */
+    font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font size */
     background-color: #0070f3;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s ease;
-  }
-  
-  .upload-button:hover {
+}
+
+.upload-button:hover {
     background-color: #0059c0;
-  }
-  
+}
 
+/* Keyframes remain the same */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
 
+/* Additional responsive tweaks */
+@media (orientation: landscape) and (max-height: 500px) {
+    .containerc {
+        min-height: 80vh;
+    }
+    
+    .upload-box {
+        height: clamp(150px, 40vh, 250px);
+    }
+}
 
-
-
-
-  
+@media (max-width: 350px) {
+    .titlec {
+        font-size: 1.6rem;
+    }
+    
+    .subtitlec {
+        font-size: 1.4rem;
+    }
+    
+    .descriptionc {
+        font-size: 0.9rem;
+    }
+    
+    .upload-box {
+        padding: 15px;
+    }
+}
