@@ -37,6 +37,7 @@
   background-color: #f0f0f0; /* Fallback */
   animation: fadeIn 1.5s ease-in-out;
   padding: 20px;
+  margin-bottom: -184px;
 }
 
 /* Login form */

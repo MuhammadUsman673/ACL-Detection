@@ -585,7 +585,7 @@ export default function MRIUpload() {
           <h1 className="titlec">Result One Click Away</h1>
           <h2 className="subtitlec">Advanced AI Analysis for MRI Scans</h2>
           <p className="descriptionc">
-            Upload your MRI scan data (.npy format, 3D array with 10–24 slices, max 16MB) for instant, AI-powered analysis.
+            Upload your MRI scan data (.npy format, 3D array with 10–40 slices, max 16MB) for instant, AI-powered analysis.
           </p>
 
           <div className="upload-section">
@@ -603,7 +603,7 @@ export default function MRIUpload() {
             >
               <FaCloudUploadAlt className="upload-icon" />
               <p className="upload-text">Click to upload or drag and drop</p>
-              <p className="upload-formats">Only .npy files accepted (3D MRI array, 10–24 slices, max 16MB)</p>
+              <p className="upload-formats">Only .npy files accepted (3D MRI array, 10–40 slices, max 16MB)</p>
               <input
                 type="file"
                 ref={fileInputRef}

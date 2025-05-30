@@ -11,89 +11,68 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
-/* Navbar */
+/* Navbar - Centered layout with left logo */
 .custom-navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Changed to space-between */
   align-items: center;
-  padding: 15px 30px;
+  padding: 10px 20px;
   background-color: #000;
   color: white;
   position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   width: 100%;
-  max-width: none; /* Remove any max-width constraints */
-  margin: 0; /* Ensure no margins create gaps */
   z-index: 100;
-  transition: background-color 0.3s ease, padding 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-/* Logo */
+/* Logo - Positioned to the left */
+.custom-logo {
+  margin-right: auto; /* Pushes everything else to the right */
+}
+
 .custom-logo img {
-  height: 40px;
+  height: 32px;
   width: auto;
   transition: transform 0.3s ease;
 }
 
 .custom-logo img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-/* Menu */
+/* Menu - Centered navigation */
+.custom-menu {
+  position: absolute; /* Absolute positioning for true center */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .custom-menu ul {
   display: flex;
   list-style: none;
+  gap: 12px;
+  align-items: center;
   padding: 0;
   margin: 0;
-  align-items: center;
-}
-
-.custom-menu li {
-  margin: 0 20px;
 }
 
 .custom-menu a {
   color: white;
   text-decoration: none;
-  padding: 10px 15px;
-  font-size: 16px;
+  padding: 8px 12px;
+  font-size: 14px;
   border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .custom-menu a:hover,
 .custom-menu a:focus {
   background-color: #007bff;
-  color: white;
 }
 
 .custom-menu a.custom-active {
   background-color: #007bff;
-  color: white;
-}
-
-/* Hamburger */
-.custom-hamburger {
-  display: none;
-  cursor: pointer;
-}
-
-.custom-hamburger button {
-  background-color: #333;
-  color: white;
-  border: none;
-  font-size: 24px;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.custom-hamburger button:hover,
-.custom-hamburger button:focus {
-  background-color: #555;
 }
 
 /* Logout button */
@@ -101,21 +80,27 @@ html, body {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  font-size: 15px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
-.logout-button:hover,
-.logout-button:focus {
+.logout-button:hover {
   background-color: #0056b3;
 }
 
-.logout-button:disabled {
-  background-color: #7da7d9;
-  cursor: not-allowed;
+/* Hamburger - Hidden by default */
+.custom-hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 4px;
+  margin-left: auto; /* Pushes to far right */
 }
 
 /* Responsive adjustments */
@@ -123,190 +108,74 @@ html, body {
 /* Large screens */
 @media (min-width: 1200px) {
   .custom-navbar {
-    padding: 20px 40px;
+    padding: 12px 30px;
   }
-
-  .custom-logo img {
-    height: 50px;
-  }
-
-  .custom-menu li {
-    margin: 0 25px;
-  }
-
-  .custom-menu a {
-    font-size: 18px;
-    padding: 12px 18px;
-  }
-
-  .logout-button {
-    padding: 10px 16px;
-    font-size: 16px;
+  .custom-menu ul {
+    gap: 20px;
   }
 }
 
-/* Tablets and small laptops */
-@media (max-width: 1024px) {
-  .custom-navbar {
-    padding: 12px 20px;
-  }
-
-  .custom-logo img {
-    height: 35px;
-  }
-
-  .custom-menu li {
-    margin: 0 15px;
-  }
-
-  .custom-menu a {
-    font-size: 15px;
-    padding: 8px 12px;
-  }
-
-  .logout-button {
-    padding: 7px 12px;
-    font-size: 14px;
+/* Tablet view */
+@media (max-width: 992px) {
+  .custom-menu ul {
+    gap: 8px;
   }
 }
 
-/* Mobile devices */
+/* Mobile menu - switches to hamburger */
 @media (max-width: 768px) {
   .custom-navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 15px;
+    padding: 8px 15px;
   }
-
-  .custom-logo img {
-    height: 30px;
-  }
-
+  
   .custom-menu {
     display: none;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .custom-menu.custom-menu-active {
-    display: block;
-    opacity: 1;
-    background-color: #222;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    padding: 15px 0;
-    transform: translateY(0);
-    animation: slideIn 0.3s ease-out;
+    transform: none;
+    background-color: #222;
+    padding: 12px 0;
+    z-index: 99;
   }
-
+  
+  .custom-menu.custom-menu-active {
+    display: block;
+  }
+  
   .custom-menu ul {
     flex-direction: column;
-    margin: 0;
-    padding: 0;
+    gap: 8px;
   }
-
-  .custom-menu li {
-    margin: 10px 0;
-  }
-
+  
   .custom-menu a {
     display: block;
-    padding: 12px;
-    font-size: 16px;
     text-align: center;
+    padding: 10px 15px;
   }
-
+  
   .custom-hamburger {
     display: block;
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
   }
-
-  .custom-hamburger button {
-    font-size: 22px;
-    padding: 6px 10px;
-  }
-
+  
   .logout-button {
-    width: 90%;
-    margin: 10px auto;
-    padding: 10px;
-    font-size: 16px;
-  }
-}
-
-/* Small devices */
-@media (max-width: 480px) {
-  .custom-navbar {
-    padding: 8px 10px;
-  }
-
-  .custom-logo img {
-    height: 25px;
-  }
-
-  .custom-hamburger button {
-    font-size: 20px;
-    padding: 5px 8px;
-  }
-
-  .custom-menu.custom-menu-active {
-    padding: 10px 0;
-  }
-
-  .custom-menu li {
+    width: 100%;
     margin: 8px 0;
   }
-
-  .custom-menu a {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .logout-button {
-    width: 95%;
-    padding: 8px;
-    font-size: 14px;
-  }
 }
 
-/* Extra small devices */
-@media (max-width: 360px) {
+/* Small mobile optimization */
+@media (max-width: 480px) {
   .custom-navbar {
-    padding: 6px 8px;
+    padding: 6px 12px;
   }
-
+  
   .custom-logo img {
-    height: 22px;
+    height: 28px;
   }
-
-  .custom-hamburger button {
-    font-size: 18px;
-    padding: 4px 6px;
-  }
-
-  .custom-menu a {
-    padding: 8px;
-    font-size: 13px;
-  }
-
-  .logout-button {
-    padding: 6px;
-    font-size: 13px;
-  }
-}
-
-/* Slide-in animation */
-@keyframes slideIn {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
+  
+  .custom-hamburger {
+    font-size: 20px;
   }
 }
