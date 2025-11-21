@@ -14,7 +14,7 @@ html, body {
 /* Navbar - Centered layout with left logo */
 .custom-navbar {
   display: flex;
-  justify-content: space-between; /* Changed to space-between */
+  justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: #000;
@@ -24,16 +24,19 @@ html, body {
   width: 100%;
   z-index: 100;
   transition: all 0.3s ease;
+  position: relative; /* Added for absolute positioning context */
 }
 
 /* Logo - Positioned to the left */
 .custom-logo {
-  margin-right: auto; /* Pushes everything else to the right */
+  flex-shrink: 0; /* Prevent logo from shrinking */
+  z-index: 2; /* Above menu */
 }
 
 .custom-logo img {
   height: 32px;
   width: auto;
+  display: block; /* Removes inline spacing issues */
   transition: transform 0.3s ease;
 }
 
@@ -43,9 +46,10 @@ html, body {
 
 /* Menu - Centered navigation */
 .custom-menu {
-  position: absolute; /* Absolute positioning for true center */
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1; /* Behind logo and hamburger */
 }
 
 .custom-menu ul {
@@ -64,6 +68,7 @@ html, body {
   font-size: 14px;
   border-radius: 4px;
   transition: all 0.2s ease;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .custom-menu a:hover,
@@ -85,6 +90,7 @@ html, body {
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  flex-shrink: 0; /* Prevent button from shrinking */
 }
 
 .logout-button:hover {
@@ -100,7 +106,8 @@ html, body {
   color: white;
   font-size: 24px;
   padding: 4px;
-  margin-left: auto; /* Pushes to far right */
+  flex-shrink: 0; /* Prevent hamburger from shrinking */
+  z-index: 2; /* Above menu */
 }
 
 /* Responsive adjustments */
@@ -119,6 +126,10 @@ html, body {
 @media (max-width: 992px) {
   .custom-menu ul {
     gap: 8px;
+  }
+  .custom-menu a {
+    padding: 8px 10px;
+    font-size: 13px;
   }
 }
 

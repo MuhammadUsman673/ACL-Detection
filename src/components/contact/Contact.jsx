@@ -68,6 +68,7 @@ const ContactUs = () => {
         <div className="content">
           <h1>Have questions or need help?</h1>
           <div className="search-container">
+            <FaSearch className="search-icon" />
             <input
               type="text"
               placeholder="Search frequently asked questions"

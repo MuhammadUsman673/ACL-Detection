@@ -13,14 +13,20 @@ html, body {
     flex-direction: column;
 }
 
+/* Main container - extends gradient to footer */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f7faff, #a5c9ff);
+}
+
 .containerc {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 60vh;
-    background: linear-gradient(135deg, #f7faff, #a5c9ff);
-    padding: 20px;
+    padding: 40px 20px;
     gap: 10px;
     text-align: center;
     flex-grow: 1;
@@ -29,7 +35,7 @@ html, body {
 }
 
 .titlec {
-    font-size: clamp(1.8rem, 5vw, 3rem); /* Responsive font size */
+    font-size: clamp(1.8rem, 5vw, 3rem);
     font-weight: 700;
     color: black;
     margin-bottom: 5px;
@@ -38,7 +44,7 @@ html, body {
 }
 
 .subtitlec {
-    font-size: clamp(1.6rem, 5vw, 3rem); /* Responsive font size */
+    font-size: clamp(1.6rem, 5vw, 3rem);
     color: #2563eb;
     margin-top: -10px;
     opacity: 0;
@@ -46,9 +52,9 @@ html, body {
 }
 
 .descriptionc {
-    font-size: clamp(0.95rem, 2vw, 1.2rem); /* Responsive font size */
+    font-size: clamp(0.95rem, 2vw, 1.2rem);
     color: black;
-    max-width: min(700px, 90vw); /* Responsive max-width */
+    max-width: min(700px, 90vw);
     line-height: 1.6;
     font-weight: 500;
     padding: 0 15px;
@@ -57,35 +63,24 @@ html, body {
     animation: fadeIn 1s forwards 0.9s;
 }
 
-.analyze-buttonc {
-    background-color: #2563eb;
-    color: white;
-    padding: clamp(10px, 2vw, 12px) clamp(16px, 3vw, 24px); /* Responsive padding */
-    border-radius: 8px;
-    font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font size */
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    border: none;
-    margin-top: 10px;
-}
-
-.analyze-buttonc:hover {
-    background-color: #1d4ed8;
-    transform: scale(1.05);
-}
-
 .upload-section {
-    max-width: min(1280px, 95vw); /* Responsive max-width */
+    max-width: min(1280px, 95vw);
     width: 100%;
     text-align: center;
     padding: 20px;
 }
 
+.upload-heading {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 15px;
+}
+
 .upload-box {
-    width: min(90%, 800px); /* Responsive width */
+    width: min(90%, 800px);
     background: linear-gradient(135deg, #ffffff, #d6e6ff);
-    padding: clamp(20px, 3vw, 30px); /* Responsive padding */
+    padding: clamp(20px, 3vw, 30px);
     border-radius: 10px;
     border: 2px dashed #2563eb;
     display: flex;
@@ -95,8 +90,8 @@ html, body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin: clamp(20px, 4vw, 40px) auto; /* Responsive margin */
-    height: clamp(180px, 30vw, 250px); /* Responsive height */
+    margin: clamp(20px, 4vw, 40px) auto;
+    height: clamp(180px, 30vw, 250px);
 }
 
 .upload-box:hover {
@@ -105,110 +100,78 @@ html, body {
 }
 
 .upload-icon {
-    font-size: clamp(2rem, 6vw, 3rem); /* Responsive icon size */
+    font-size: clamp(2rem, 6vw, 3rem);
     color: #2563eb;
     margin-bottom: 10px;
 }
 
 .upload-text {
-    font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+    font-size: clamp(1rem, 2vw, 1.2rem);
     font-weight: 500;
     color: #374151;
 }
 
 .upload-formats {
-    font-size: clamp(0.85rem, 1.8vw, 1rem); /* Responsive font size */
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
     color: #6b7280;
     margin-top: 5px;
 }
 
-.footer5 {
-    width: 100%;
-    background-color: black;
-    color: white;
-    padding: clamp(15px, 2vw, 20px); /* Responsive padding */
-    text-align: center;
-    margin-top: auto;
-}
-
-.social-icons5 {
-    margin-bottom: clamp(10px, 1.5vw, 15px); /* Responsive margin */
-    margin-top: clamp(5px, 1vw, 10px); /* Responsive margin */
-}
-
-.social-icon5 {
-    font-size: clamp(1.2rem, 3vw, 2rem); /* Responsive icon size */
-    margin: 0 clamp(8px, 1.5vw, 15px); /* Responsive margin */
-    color: white;
-    transition: color 0.3s ease;
-}
-
-.social-icon5:hover {
-    color: #007bff;
-}
-
-.footer-copyright5 p {
-    font-size: clamp(0.85rem, 2vw, 1rem); /* Responsive font size */
-    color: #bbb;
-    margin-top: clamp(5px, 1vw, 10px); /* Responsive margin */
-}
-
-.scan-label {
-    font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font size */
+.upload-message {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     font-weight: 500;
-    margin-bottom: 8px;
-    display: block;
+    text-align: center;
 }
 
-.scan-select {
-    padding: clamp(6px, 1vw, 8px) clamp(10px, 1.5vw, 12px); /* Responsive padding */
-    font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font size */
-    margin-bottom: clamp(15px, 2vw, 20px); /* Responsive margin */
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    width: 100%;
-    max-width: min(300px, 90vw); /* Responsive max-width */
+.upload-message.valid {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #10b981;
 }
 
-.file-info {
-    margin-top: clamp(8px, 1vw, 10px); /* Responsive margin */
-    font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font size */
-    display: flex;
-    align-items: center;
-    gap: clamp(5px, 1vw, 8px); /* Responsive gap */
-}
-
-.check-icon {
-    font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive icon size */
+.upload-message.invalid {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #ef4444;
 }
 
 .upload-button {
-    margin-top: clamp(15px, 2vw, 20px); /* Responsive margin */
-    padding: clamp(8px, 1.5vw, 10px) clamp(15px, 2vw, 20px); /* Responsive padding */
-    font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font size */
-    background-color: #0070f3;
+    margin-top: clamp(15px, 2vw, 20px);
+    padding: clamp(10px, 1.5vw, 12px) clamp(20px, 2vw, 24px);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    background-color: #2563eb;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s ease;
+    font-weight: 600;
 }
 
-.upload-button:hover {
-    background-color: #0059c0;
+.upload-button:hover:not(:disabled) {
+    background-color: #1d4ed8;
+    transform: scale(1.05);
 }
 
-/* Keyframes remain the same */
+.upload-button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
 @keyframes fadeIn {
     to {
         opacity: 1;
     }
 }
 
-/* Additional responsive tweaks */
+/* Responsive adjustments */
 @media (orientation: landscape) and (max-height: 500px) {
     .containerc {
-        min-height: 80vh;
+        padding: 20px;
     }
     
     .upload-box {
