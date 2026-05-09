@@ -6,7 +6,7 @@
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 2rem;
   gap: 2rem;
   flex-wrap: wrap;
   margin-top: 20px;
@@ -16,7 +16,7 @@
 
 .about-left {
   flex: 1;
-  max-width: 60%;
+  max-width: 58%;
   padding: 1rem;
   margin-left: 30px;
   opacity: 0;
@@ -24,64 +24,85 @@
 }
 
 .about-left h2 {
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   margin-bottom: 10px;
   text-align: left;
-  font-weight: 500;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #888;
 }
 
 .about-left h3 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  color: #333;
-  line-height: 1.2;
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  color: #1a1a1a;
+  line-height: 1.25;
+  font-weight: 800;
 }
 
 .about-left p {
-  font-size: 1.5rem;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #555;
   text-align: justify;
+  max-width: 580px;
 }
 
-.access-records-btn {
-  padding: 0.8rem 1.5rem;
-  background: linear-gradient(to right, #191919, #444444);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+/* Stats Row */
+.about-stats {
+  display: flex;
+  gap: 36px;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
-.access-records-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
 }
 
 .about-right {
   flex: 1;
-  max-width: 40%;
+  max-width: 42%;
   text-align: center;
   opacity: 0;
   animation: fadeInRight 1s forwards 0.6s;
 }
 
 .mission-image {
-  width: 80%;
+  width: 100%;
   height: auto;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  transition: transform 0.5s ease;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  object-fit: cover;
+  max-height: 420px;
 }
 
 .mission-image:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
 }
 
-/* ======================== RESPONSIVE BREAKPOINTS ======================== */
+/* ======================== RESPONSIVE ======================== */
 
 @media screen and (max-width: 1024px) {
   .about-container {
@@ -94,6 +115,23 @@
     max-width: 100%;
     margin-left: 0;
     text-align: center;
+  }
+
+  .about-left h2 {
+    text-align: center;
+  }
+
+  .about-left p {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .about-stats {
+    justify-content: center;
+  }
+
+  .stat-item {
+    align-items: center;
   }
 
   .about-right {
@@ -110,45 +148,38 @@
 @media screen and (max-width: 768px) {
   .about-left {
     padding: 0 1rem;
-    text-align: center;
   }
 
   .about-left h2 {
-    font-size: 1.3rem;
-    margin-bottom: 8px;
-    line-height: 1.3;
+    font-size: 0.8rem;
   }
 
   .about-left h3 {
     font-size: 2rem;
     line-height: 1.3;
-    margin-bottom: 1rem;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .about-left p {
     font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 1rem;
-    text-align: left;
-    padding: 0 10px;
   }
 
-  .about-right {
-    padding: 0 1rem;
+  .stat-number {
+    font-size: 1.6rem;
+  }
+
+  .about-stats {
+    gap: 24px;
   }
 
   .mission-image {
-    width: 100%;
     max-width: 100%;
   }
 }
 
 @media screen and (max-width: 480px) {
   .about-left h2 {
-    font-size: 1.1rem;
+    font-size: 0.75rem;
   }
 
   .about-left h3 {
@@ -157,75 +188,175 @@
 
   .about-left p {
     font-size: 0.95rem;
-    line-height: 1.5;
-    padding: 0 10px;
   }
 
-  .access-records-btn {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.2rem;
+  .stat-number {
+    font-size: 1.4rem;
   }
 
-  .mission-image {
-    max-width: 100%;
+  .stat-label {
+    font-size: 0.72rem;
   }
 }
 
 /* ========================== PRINCIPLES SECTION ========================== */
 
 .principles-container {
-  background-color: black;
+  background-color: #0f0f0f;
   color: white;
-  padding: 40px 20px;
+  padding: 60px 40px;
   text-align: center;
+  margin-top: 20px;
 }
 
 .principles-heading {
-  font-size: 2em;
-  margin-bottom: 30px;
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.principles-subheading {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
 .principles-boxes {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .principle-box {
-  background: linear-gradient(to right, #191919, #444444);
-  padding: 20px;
-  border-radius: 8px;
-  width: 250px;
+  background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+  padding: 28px 22px;
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.principle-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+}
+
+.principle-icon {
+  font-size: 2.2rem;
+  color: #cccccc;
+  margin-bottom: 14px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .principle-box h3 {
-  margin-top: 15px;
+  margin-top: 0;
   font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 
 .principle-box p {
-  font-size: 1em;
-  margin-top: 10px;
+  font-size: 0.92rem;
+  color: #bbbbbb;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .principles-boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .principles-container {
+    padding: 40px 20px;
+  }
+
+  .principles-heading {
+    font-size: 2rem;
+  }
+
   .principles-boxes {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
   }
 
   .principle-box {
-    width: 80%;
+    padding: 22px 16px;
+  }
+
+  .principle-icon {
+    font-size: 1.8rem;
+  }
+
+  .principle-box h3 {
+    font-size: 1rem;
+  }
+
+  .principle-box p {
+    font-size: 0.85rem;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .principles-container {
+    padding: 30px 12px;
+  }
+
+  .principles-heading {
+    font-size: 1.7rem;
+  }
+
+  .principles-subheading {
+    font-size: 0.88rem;
+  }
+
+  .principles-boxes {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
   .principle-box {
-    width: 100%;
+    padding: 20px 14px;
+  }
+
+  .principle-icon {
+    font-size: 1.6rem;
+  }
+
+  .principle-box h3 {
+    font-size: 0.95rem;
+  }
+
+  .principle-box p {
+    font-size: 0.82rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .principles-heading {
+    font-size: 1.5rem;
+  }
+
+  .principle-box h3 {
+    font-size: 0.9rem;
+  }
+
+  .principle-box p {
+    font-size: 0.78rem;
   }
 }
 
@@ -291,6 +422,10 @@
 }
 
 @keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
   to {
     opacity: 1;
     transform: translateX(0);
@@ -298,6 +433,10 @@
 }
 
 @keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
   to {
     opacity: 1;
     transform: translateX(0);
